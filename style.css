@@ -299,7 +299,7 @@ fieldset legend { margin-bottom: 7px; padding: 0; }
   .hero { grid-template-columns: minmax(0, 1fr); min-height: auto; padding-top: 104px; gap: 36px; }
   .hero__btns .btn { flex: 1 1 100%; }
   .disc { left: auto; right: 6px; bottom: -30px; width: 110px; }
-  .univers, .grille, .temoins { grid-template-columns: 1fr; }
+  .univers, .grille, .temoins { grid-template-columns: minmax(0, 1fr); }
   .badge { right: 10px; }
   .mix { grid-template-columns: 76px 1fr; gap: 16px; padding: 14px; }
   .mix__pochette { font-size: 22px; }
