@@ -127,7 +127,7 @@ section { padding-block: clamp(72px, 10vw, 130px); }
 /* ============ DEUX UNIVERS ============ */
 .univers { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .univers__carte {
-  display: grid; grid-template-rows: auto 1fr; text-decoration: none;
+  display: grid; grid-template-rows: auto 1fr; grid-template-columns: minmax(0, 1fr); text-decoration: none;
   background: var(--blanc); border-radius: var(--r); overflow: hidden;
   box-shadow: 0 30px 60px -40px rgba(60,20,100,.35);
   transition: transform .35s ease;
@@ -135,7 +135,7 @@ section { padding-block: clamp(72px, 10vw, 130px); }
 .univers__carte:hover { transform: translateY(-6px); }
 .univers__carte .ph--carte { aspect-ratio: 16 / 10; border-radius: 0; }
 .univers__txt { padding: 30px 32px 34px; }
-.univers__txt h2 { font-size: clamp(34px, 4vw, 52px); margin-bottom: 12px; }
+.univers__txt h2 { font-size: clamp(28px, 4vw, 52px); margin-bottom: 12px; }
 .univers__txt p:not(.kicker) { margin: 0 0 20px; }
 .fleche { font-weight: 700; color: var(--mauve); }
 .univers__carte--sombre { background: var(--nuit); color: #cfc6da; }
