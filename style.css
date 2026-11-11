@@ -295,7 +295,8 @@ fieldset legend { margin-bottom: 7px; padding: 0; }
   body.menu-ouvert .logo-txt { color: var(--blanc); }
   body.menu-ouvert .nav { background: transparent; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
 
-  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 104px; gap: 36px; }
+  .hero__title { font-size: clamp(44px, 19vw, 110px); }
+  .hero { grid-template-columns: minmax(0, 1fr); min-height: auto; padding-top: 104px; gap: 36px; }
   .hero__btns .btn { flex: 1 1 100%; }
   .disc { left: auto; right: 6px; bottom: -30px; width: 110px; }
   .univers, .grille, .temoins { grid-template-columns: 1fr; }
