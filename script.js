@@ -49,18 +49,3 @@ form.addEventListener('submit', ev => {
     ? 'Merci! (Aperçu : l\'envoi du formulaire sera branché à la mise en ligne.)'
     : 'Il manque quelques infos : nom, courriel, date et type d\'événement.';
 });
-
-// APERÇU : sélecteur de palette (retirer à la mise en ligne)
-(function () {
-  const boutons = document.querySelectorAll('.essai button');
-  function appliquer(p) {
-    if (p === 'a') document.documentElement.removeAttribute('data-palette');
-    else document.documentElement.setAttribute('data-palette', p);
-    boutons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.p === p)));
-    try { localStorage.setItem('palette', p); } catch (e) {}
-  }
-  let depart = new URLSearchParams(location.search).get('p');
-  if (!depart) { try { depart = localStorage.getItem('palette'); } catch (e) {} }
-  if (depart) appliquer(depart);
-  boutons.forEach(b => b.addEventListener('click', () => appliquer(b.dataset.p)));
-})();
