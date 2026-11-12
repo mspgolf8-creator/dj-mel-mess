@@ -100,7 +100,8 @@ section { padding-block: clamp(72px, 10vw, 130px); }
 .nav__links a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -4px; height: 2px; background: var(--accent); transition: right .25s ease; }
 .nav__links a:not(.btn):hover::after { right: 0; }
 .nav__cta { padding: 14px 24px; margin-left: 8px; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
-.nav__cta:hover { background: var(--encre); }
+.nav__cta { background: var(--blanc); color: var(--accent); border: 1.5px solid var(--accent); }
+.nav__cta:hover, .nav__cta:active, .nav__cta:focus-visible { background: var(--accent); color: var(--blanc); }
 .nav__burger { display: none; }
 
 /* ============ ACCUEIL ============ */
@@ -241,7 +242,8 @@ fieldset legend { margin-bottom: 7px; padding: 0; }
 .choix label { cursor: pointer; position: relative; }
 .choix input { position: absolute; opacity: 0; pointer-events: none; }
 .choix span { display: inline-block; padding: 11px 18px; border-radius: 4px; border: 1.5px solid var(--bordure); font-size: 15px; font-weight: 500; color: var(--encre); transition: all .2s ease; }
-.choix input:checked + span { background: var(--encre); border-color: var(--encre); color: var(--blanc); }
+.choix input:checked + span { background: var(--accent); border-color: var(--accent); color: var(--blanc); }
+.choix label:hover span { border-color: var(--accent); }
 .choix input:focus-visible + span { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 30%, transparent); }
 .form .btn { padding-block: 18px; }
 .form__note { margin: 0; font-size: 14px; color: var(--accent-fonce); min-height: 1em; }
