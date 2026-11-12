@@ -275,9 +275,11 @@ fieldset legend { margin-bottom: 7px; padding: 0; }
   body { font-size: 16px; }
   .nav__burger {
     display: grid; gap: 6px; width: 46px; height: 46px; place-content: center;
-    background: var(--encre); border: 0; border-radius: 4px; cursor: pointer; z-index: 60;
+    background: transparent; border: 0; border-radius: 4px; cursor: pointer; z-index: 60; -webkit-tap-highlight-color: transparent;
   }
-  .nav__burger span { width: 18px; height: 2px; background: var(--blanc); transition: transform .3s ease; }
+  .nav__burger span { width: 26px; height: 2.5px; border-radius: 2px; background: var(--accent); transition: transform .3s ease; }
+  .nav__burger:focus { outline: none; }
+  .nav__burger:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .nav__burger[aria-expanded="true"] span:first-child { transform: translateY(4px) rotate(45deg); }
   .nav__burger[aria-expanded="true"] span:last-child { transform: translateY(-4px) rotate(-45deg); }
   .nav__links {
